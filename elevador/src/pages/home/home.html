@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Elevador
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="elevadores">
+    <ion-list>
+      <ion-item>
+        <ion-label floating >Andar Elevador 1</ion-label>
+        <ion-input type="number" maxlength="2" max="15" formControlName="elevador_1" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating >Andar Elevador 2</ion-label>
+        <ion-input type="number" maxlength="2" max="15" formControlName="elevador_2" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button block color="primary" (click)="moverElevador()" >Confirmar</button>
+      </ion-item>
+    </ion-list>
+  </form>
+
+  <div>
+    <div>
+      <b>Andar onde o elevador estava</b>
+      <ion-label>elevator1 -> {{ this.historicoElevador_1['origem'] }}</ion-label>
+      <ion-label>elevator2 -> {{ this.historicoElevador_2['origem'] }}</ion-label>
+    </div>
+    <ion-label>-------------</ion-label>
+    <div>
+      <b>Andar solicitado</b>
+      <ion-label>elevator1 -> go to -> {{ this.historicoElevador_1['destino'] }}</ion-label>
+      <ion-label>elevator2 -> go to -> {{ this.historicoElevador_2['destino'] }}</ion-label>
+    </div>
+    <ion-label>-------------</ion-label>
+    <div>
+      <b>Andar para onde o elevador foi</b>
+      <ion-label>elevator1 -> go to -> {{ this.historicoElevador_1['final'] }}</ion-label>
+      <ion-label>elevator2 -> go to -> {{ this.historicoElevador_2['final'] }}</ion-label>
+    </div>
+  </div>
+</ion-content>
