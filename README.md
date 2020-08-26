@@ -23,12 +23,17 @@ input: 7 9
 ----------
 elevator1 -> 1
 elevator2 -> 1
+
 ----------
 ----------
+
 elevator1 -> go to -> 9
 elevator2 -> go to -> 7
+
 ----------
 ----------
+
 elevator1 -> go to -> 15
 elevator2 -> go to -> 1
+
 ----------
